@@ -3,7 +3,7 @@ module.exports = names => `
   WHERE {
     VALUES ?name { ${names} }
     OPTIONAL {
-      ?item wdt:P31 wd:Q5 ; rdfs:label ?name .
+      ?item wdt:P31 wd:Q5 ; rdfs:label|skos:altLabel ?name .
       { # A person can have a 'candidate in election' statement to an election
         ?item p:P3602 ?es .
         ?es ps:P3602 ?election .
